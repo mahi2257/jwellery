@@ -54,12 +54,16 @@ public class Product implements Serializable {
 	private String service;
 	
 	// Golden / Silver / Artificial
-	@Column(name = "type")
+	@Column(name = "TYPE")
 	private String type;
 	
 	// Marriage / Fashion / Casual
-	@Column(name = "purpose")
+	@Column(name = "PURPOSE")
 	private String purpose;
+
+	// Marathi / Rajesthani 
+	@Column(name = "REGIONAL")
+	private String regional;
 
 	@Column(name = "FEATURES")
 	private String productSpecification;
@@ -204,6 +208,15 @@ public class Product implements Serializable {
 	public void setPurpose(String purpose) {
 		this.purpose = purpose;
 	}
+
+	public String getRegional() {
+		return regional;
+	}
+
+	public void setRegional(String regional) {
+		this.regional = regional;
+	}
+	
 	
 	
 	
