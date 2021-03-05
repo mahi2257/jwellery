@@ -1,6 +1,7 @@
 package com.viral.product.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.viral.product.model.GenericSearchFilter;
 import com.viral.product.model.Product;
 import com.viral.product.service.IProductService;
@@ -16,15 +16,15 @@ import com.viral.product.service.IProductService;
 @RestController
 @RequestMapping("/product")
 public class ProductController {
-
+	
 	//viralBazaar.com
 	
 	@Autowired
 	private IProductService productService;
 	
 	//this api used for generic search
-	@GetMapping("/findProductsBySearch/{search}")
-	public List<Product> findProductsBySearch(@PathVariable GenericSearchFilter search){
+	@GetMapping("/findProductsBySearch")
+	public List<Map<String, Object>> findProductsBySearch(@RequestBody GenericSearchFilter search){
 		return productService.findProductsByGenericSearch(search);
 	}
 		

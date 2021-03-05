@@ -20,11 +20,10 @@ spring:
 
   datasource:
 #   type: org.apache.tomcat.jdbc.pool.DataSource
-    platform: mysql
-    url: jdbc:mysql://192.168.43.131:3306/inventory?allowLoadLocalInfile=true&serverTimezone=UTC
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    platform: mysql
+    url: postgres://hfnxszdkilngqt:e7e1d243b94fd2de10ff871c5be151c6f282e12621fce39fe37b7a40afd572bf@ec2-54-211-77-238.compute-1.amazonaws.com:5432/d2nmtqd1b5qrse
+    username: hfnxszdkilngqt
+    password: e7e1d243b94fd2de10ff871c5be151c6f282e12621fce39fe37b7a40afd572bf
     initialization-mode: always
 #    data: classpath:sql-file/commonConfigData.sql
     tomcat:

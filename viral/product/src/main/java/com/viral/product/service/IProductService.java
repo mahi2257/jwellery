@@ -1,6 +1,7 @@
 package com.viral.product.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +15,7 @@ public interface IProductService {
 	//public Product postProduct(Product products);	
 	//public void deleteByProdId(Long prodId);
 	
-	public List<Product> findProductsByGenericSearch(GenericSearchFilter search);
+	public List<Map<String, Object>> findProductsByGenericSearch(GenericSearchFilter search);
 	
 	public List<Product> findProductByFilter(Product product);
 	
