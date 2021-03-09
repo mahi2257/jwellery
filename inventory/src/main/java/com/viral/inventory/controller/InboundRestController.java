@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.viral.inventory.model.Category;
 import com.viral.inventory.model.Product;
 import com.viral.inventory.service.IInboundService;
 
@@ -29,6 +28,5 @@ public class InboundRestController {
 		return inboundService.getProductsByBrandAndModel(brand, model);
 	}
 	
-
 
 }
