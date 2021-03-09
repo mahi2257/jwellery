@@ -13,6 +13,7 @@
 	<artifactId>user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>user</name>
+	<packaging>war</packaging>
 	<description>User Module</description>
 
 	<properties>
