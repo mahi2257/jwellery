@@ -1,3 +1,4 @@
+heroku buildpacks:set https://github.com/heroku/heroku-buildpack-java
 web: bundle exec rails server -p $PORT
 web: lein run -m user.web $PORT
 web: java -jar target/inventory-0.0.1-SNAPSHOT.jar
